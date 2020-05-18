@@ -114,19 +114,19 @@ public class CommunicationThread extends Thread {
 //                } else {
                     JSONObject content = new JSONObject(pageSourceCode);
 
-                    JSONArray weatherArray = content.getJSONArray(Constants.WEATHER);
+//                    JSONArray weatherArray = content.getJSONArray(Constants.WEATHER);
                     JSONObject weather;
                     String condition = "";
-                    for (int i = 0; i < weatherArray.length(); i++) {
-                        weather = weatherArray.getJSONObject(i);
-                        Log.i("TAG", pageSourceCode );
+//                    for (int i = 0; i < weatherArray.length(); i++) {
+//                        weather = weatherArray.getJSONObject(i);
+//                        Log.i("TAG", pageSourceCode );
 
 //                        condition += weather.getString(Constants.MAIN) + " : " + weather.getString(Constants.DESCRIPTION);
 //
 //                        if (i < weatherArray.length() - 1) {
 //                            condition += ";";
 //                        }
-                    }
+//                    }
 
 //                    JSONObject main = content.getJSONObject(Constants.MAIN);
 //                    String temperature = main.getString(Constants.TEMP);
@@ -139,11 +139,11 @@ public class CommunicationThread extends Thread {
 //                    );
 //                    serverThread.setData(city, weatherForecastInformation);
 //                }
-            if (weatherForecastInformation == null) {
-                Log.e("TAG", "[COMMUNICATION THREAD] Weather Forecast Information is null!");
-                return;
-            }
-            String result = null;
+//            if (weatherForecastInformation == null) {
+//                Log.e("TAG", "[COMMUNICATION THREAD] Weather Forecast Information is null!");
+//                return;
+//            }
+//            String result = null;
 //            switch(informationType) {
 //                case Constants.ALL:
 //                    result = weatherForecastInformation.toString();
@@ -151,8 +151,8 @@ public class CommunicationThread extends Thread {
 //                default:
 //                    result = "[COMMUNICATION THREAD] Wrong information type (all / temperature / wind_speed / condition / humidity / pressure)!";
 //            }
-//            printWriter.println(result);
-//            printWriter.flush();
+            printWriter.println("Result");
+            printWriter.flush();
         } catch (IOException ioException) {
             Log.e("TAG", "[COMMUNICATION THREAD] An exception has occurred: " + ioException.getMessage());
             ioException.printStackTrace();
